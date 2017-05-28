@@ -1,0 +1,1 @@
+svelte compile --format iife WaveScorer.html > WaveScorer.js
