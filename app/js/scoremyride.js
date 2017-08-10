@@ -34,4 +34,10 @@ $(".wavetype").on("click", function(){
     }
 });
 
+//scoring button functions
+$("#smturn").on("click", function(){
+    theScore += scoreProfile.smallturn;
+    $("#thescore").html(theScore);
+})
+
 
