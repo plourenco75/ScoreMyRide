@@ -17,3 +17,8 @@
 .medium {
     height: 75px;
 }
+
+.selected {
+    background: steelblue;
+    color: white;
+}
