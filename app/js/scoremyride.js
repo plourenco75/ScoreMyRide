@@ -1,6 +1,6 @@
 //THE SCORE
 var theScore = 0.0;
-$("#thescore").html(theScore);
+reset();
 
 //default score profile (shifting beachie)
 var beachies             = {supertube:  8.5,  superturn:  6.0, superhuman: 8.5,
@@ -32,12 +32,55 @@ $(".wavetype").on("click", function(){
     } else if ($(this).text() === "Short Hollow Slab") {
         scoreProfile = shortHollowSlab;
     }
+    reset();
 });
 
 //scoring button functions
 $("#smturn").on("click", function(){
-    theScore += scoreProfile.smallturn;
+    updateScore(scoreProfile.smallturn);
+});
+
+$("#qktube").on("click", function(){
+    updateScore(scoreProfile.smalltube);
+});
+
+$("#mdturn").on("click", function(){
+    updateScore(scoreProfile.mediumturn);
+});
+
+$("#mdtube").on("click", function(){
+    updateScore(scoreProfile.mediumtube);
+});
+
+$("#superhmn").on("click", function(){
+    updateScore(scoreProfile.superhuman);
+});
+
+$("#superturn").on("click", function(){
+    updateScore(scoreProfile.superturn);
+});
+
+$("#supertube").on("click", function(){
+    updateScore(scoreProfile.supertube);
+});
+
+$("#reset").click(function(){
+    reset();
+});
+
+function updateScore(num) {
+    theScore += num;
+    if (theScore >= 10) {
+        $("#thescore").css("color", "green");
+        theScore = 10.0;
+    }
     $("#thescore").html(theScore);
-})
+}
+
+function reset() {
+    theScore = 0;
+    $("#thescore").html(theScore);
+    $("#thescore").css("color", "black");
+}
 
 
