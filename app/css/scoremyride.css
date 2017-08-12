@@ -4,11 +4,17 @@
     font-size: 8em;
 }
 
- .scorebtn {
+.scorebtn {
     /* width: 30%; */
     float: left;
     margin: 5px 5px;
 } 
+
+.adjustbtn {
+    float: left;
+    margin: 5px 5px;
+    height: 40px;
+}
 
 .super {
     height: 150px;

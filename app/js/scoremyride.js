@@ -12,9 +12,9 @@ var longHollowPoint      = {supertube:  5.0,  superturn:  3.0, superhuman: 5.5,
 var longPerformancePoint = {supertube:  8.5,  superturn:  4.0, superhuman: 6.5,
                             mediumtube: 5.0,  mediumturn: 3.0,
                             smalltube:  4.0,  smallturn:  2.0};
-var shortHollowSlab      = {supertube:  7.5,  superturn:  4.0, superhuman: 7.5,
-                            mediumtube: 4.0,  mediumturn: 2.0,
-                            smalltube:  2.0,  smallturn:  1.0};
+var shortHollowSlab      = {supertube:  7.5,  superturn:  3.0, superhuman: 5.5,
+                            mediumtube: 3.0,  mediumturn: 1.5,
+                            smalltube:  1.5,  smallturn:  0.5};
 
 var scoringProfiles = [beachies, longHollowPoint, longPerformancePoint, shortHollowSlab];
 var scoreProfile = beachies;
@@ -68,18 +68,26 @@ $("#reset").click(function(){
     reset();
 });
 
+$("#bonus").click(function(){
+    updateScore(0.25);
+});
+
+$("#deduct").click(function(){
+    updateScore(0.25);
+});
+
 function updateScore(num) {
     theScore += num;
     if (theScore >= 10) {
         $("#thescore").css("color", "green");
         theScore = 10.0;
     }
-    $("#thescore").html(theScore);
+    $("#thescore").text(theScore);
 }
 
 function reset() {
     theScore = 0;
-    $("#thescore").html(theScore);
+    $("#thescore").text(theScore);
     $("#thescore").css("color", "black");
 }
 
