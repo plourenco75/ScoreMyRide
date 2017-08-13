@@ -36,52 +36,59 @@
         </nav>
         <!--end NAVBAR  -->
 
+        <!-- start main body of buttons -->
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-12">
                     <button id="bonus" class="btn btn-warning btn-lg btn-block adjustbtn">
-                        <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Bonus Points
                     </button>
                 </div>
-                <div class="col-sm-6">
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
                     <p id="thescore"></p>
                 </div>
-                <div class="col-sm-3">
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
                     <button id="deduct" class="btn btn-warning btn-lg btn-block adjustbtn">
-                        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Reduce Points
                     </button>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-sm-4">
-                    <button id="supertube" class="btn btn-primary btn-lg btn-block super scorebtn">Super Deep Tube</button>
+                <div class="col-sm-6">
+                    <button id="supertube" class="btn btn-primary btn-lg btn-block super scorebtn tubebtn"></button>
                 </div>
-                <div class="col-sm-4">
-                    <button id="superturn" class="btn btn-info btn-lg btn-block super scorebtn">Super Critical Turn</button>
+                <div class="col-sm-6">
+                    <button id="superturn" class="btn btn-info btn-lg btn-block super scorebtn turnbtn"></button>
                 </div>
-                <div class="col-sm-4">
-                    <button id="superhmn" class="btn btn-danger btn-lg btn-block super scorebtn">Superhuman Turn</button>
+                <!-- <div class="col-sm-4">
+                    <button id="superhmn" class="btn btn-danger btn-lg btn-block super scorebtn turnbtn"></button>
+                </div> -->
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <button id="mdtube" class="btn btn-primary btn-lg btn-block medium scorebtn tubebtn"></button>
+                </div>
+                <div class="col-sm-6">
+                    <button id="mdturn" class="btn btn-info btn-lg btn-block medium scorebtn turnbtn"></button>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-sm-4">
-                    <button id="mdtube" class="btn btn-primary btn-lg btn-block medium scorebtn">Medium Tube</button>
+                <div class="col-sm-6">
+                    <button id="qktube" class="btn btn-primary btn-lg btn-block small scorebtn tubebtn"></button>
                 </div>
-                <div class="col-sm-4">
-                    <button id="mdturn" class="btn btn-info btn-lg btn-block medium scorebtn">Medium Turn</button>
+                <div class="col-sm-6">
+                    <button id="smturn" class="btn btn-info btn-lg btn-block small scorebtn turnbtn"></button>
                 </div>
             </div>
-
             <div class="row">
-                <div class="col-sm-4">
-                    <button id="qktube" class="btn btn-primary btn-lg btn-block scorebtn">Quick Tube</button>
-                </div>
-                <div class="col-sm-4">
-                    <button id="smturn" class="btn btn-info btn-lg btn-block scorebtn">Small Turn</button>
-                </div>
-                <div class="col-sm-4">
+                <div class="col-sm-12">
                     <button id="reset" class="btn btn-default btn-lg btn-block scorebtn">Reset Score</button>
                 </div>
             </div>
@@ -89,7 +96,6 @@
 
         <script src="js/lib/jquery-3.2.1.min.js"></script>
         <script src="js/lib/bootstrap.min.js"></script>
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
         <script src="js/scoremyride.js"></script>
     </body>
 </html>

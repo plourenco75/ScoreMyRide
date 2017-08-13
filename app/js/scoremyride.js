@@ -73,7 +73,7 @@ $("#bonus").click(function(){
 });
 
 $("#deduct").click(function(){
-    updateScore(-0.25);
+    updateScore(-0.5);
 });
 
 function updateScore(num) {
