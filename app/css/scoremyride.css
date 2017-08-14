@@ -18,7 +18,7 @@
 }
 
 .turnbtn {
-    background-image: url(../imgs/vert.png);
+    background-image: url(../imgs/surf_move2.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -31,6 +31,7 @@
 
 .super {
     height: 150px;
+    background-size: contain;
 }
 
 .medium {
