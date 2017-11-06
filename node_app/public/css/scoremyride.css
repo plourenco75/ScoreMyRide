@@ -1,0 +1,50 @@
+#thescore {
+    font-family: 'LCDBOLD';
+    text-align: center;
+    font-size: 5em;
+}
+
+.scorebtn {
+    /* width: 30%; */
+    float: left;
+    margin: 5px 5px;
+    background-size: auto;
+}
+
+.tubebtn {
+    background-image: url(../imgs/tube.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.turnbtn {
+    background-image: url(../imgs/surf_move.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.adjustbtn {
+    float: left;
+    margin: 5px 5px;
+    height: 40px;
+}
+
+.super {
+    height: 150px;
+    background-size: contain;
+}
+
+.medium {
+    height: 90px;
+    background-size: contain;
+}
+
+.small {
+    height: 60px;
+    background-size: contain;
+}
+
+.selected {
+    background: steelblue;
+    color: white;
+}

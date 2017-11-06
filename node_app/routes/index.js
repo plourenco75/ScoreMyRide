@@ -6,4 +6,9 @@ router.get("/", function(req, res){
 });
 
 
+router.get("/scorebuilder", function(req, res){
+    res.render("scorebuilder");
+});
+
+
 module.exports = router;
