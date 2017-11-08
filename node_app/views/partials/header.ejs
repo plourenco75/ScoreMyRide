@@ -18,14 +18,13 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand">Score My Ride!</a>
+                    <a href="/" class="navbar-brand">Score My Ride!</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-nav-demo">
                     <ul class="nav navbar-nav">
-                        <li class="wavetype active"><a href="#">Beachie</a></li>
-                        <li class="wavetype"><a href="#">PointBreak (Hollow)</a></li>
-                        <li class="wavetype"><a href="#">PointBreak (Performance)</a></li>
-                        <li class="wavetype"><a href="#">Slab</a></li>
+                        <% wavetypes.forEach(function(wavetype){ %>
+                            <li class="wavetype"><a href="#"><%= wavetype.name %></a></li>
+                        <% }) %>
                     </ul>
                     <!-- <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">Sign Up</a></li>

@@ -43,23 +43,19 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-    background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+    background-image: url(https://www.surfertoday.com/images/stories/surfingaquitaine.jpg) 
 }
 .slideshow li:nth-child(2) { 
-    background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+    background-image: url(https://www.fijivacations.com/media/Tavarua-Cloudbreak-900x426.jpg);
     animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
-    background-image: url(http://i.imgur.com/emvhOnb.jpg);
+    background-image: url(https://www.joliphotos.com/files/Joli%20Perfection%20Collection%20Posters/snapper_rocks_joli_qs9714.jpg);
     animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+    background-image: url(https://cdn.surfer.com/uploads/2017/04/LiquidIdeals_Teahupoo_Servais_2.jpg);
     animation-delay: 30s; 
-}
-.slideshow li:nth-child(5) { 
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
-    animation-delay: 40s; 
 }
 
 
