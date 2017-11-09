@@ -22,14 +22,14 @@ router.get("/wavetypes", function(req, res){
 // SHOW - more info about one wavetype
 router.get("/wavetypes/:id", function(req, res){
     //find the wavetype with provided ID
-    Wavetype.findById(req.params.id).populate("comments").exec(function(err, foundWavetype){
+    Wavetype.findById(req.params.id, function(err, foundWavetype){
         if (err) {
             console.log(err);
         } else {
             // console.log(foundWavetype);
             res.render("wavetypes/show", {wavetype: foundWavetype});
         }
-    });
+    })
 });
 
 
