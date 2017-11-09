@@ -1,7 +1,7 @@
 var express       = require('express'),
     app           = express(),
     bodyParser    = require('body-parser'),
-    mongoose      = require('mongoose');
+    mongoose      = require('mongoose'),
     seedDB        = require('./seeds');
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -15,10 +15,12 @@ mongoose.connect(mongoUrl);
 seedDB();
 
 
-var indexRoutes = require('./routes/index');
+var wavetypeRoutes = require('./routes/wavetypes'),
+    indexRoutes    = require('./routes/index');
 
 app.use(indexRoutes);
-
+app.use(wavetypeRoutes);
+    
 app.listen(5000, function(){
     console.log("ScoreMyRide Server Started");
 });
