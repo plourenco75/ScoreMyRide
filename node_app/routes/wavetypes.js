@@ -10,11 +10,13 @@ router.get("/", function(req, res){
 // INDEX - show all wavetypes
 router.get("/wavetypes", function(req, res){
     // Get all wavetypes from DB
+    // logic to check if logged in .. if so, then only retrieve wavetypes defined by that user only,
+    // otherwise return only the wavetypes with username "default"
     Wavetype.find({}, function(err, allWavetypes){
         if (err) {
             console.log(err);
         } else {
-            res.render("wavetypes/index", {wavetypes: allWavetypes});
+            res.render("wavetypes/index", {wavetypes: allWavetypes, currentUser: req.user});
         }
     })
 });
