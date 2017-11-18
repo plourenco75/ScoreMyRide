@@ -4,6 +4,8 @@ var express       = require('express'),
     mongoose      = require('mongoose'),
     LocalStrategy = require('passport-local'),
     passport      = require('passport'),
+    flash         = require('connect-flash'),
+    methodOverride = require('method-override'),
     User          = require('./models/user'),
     seedDB        = require('./seeds');
 
@@ -30,8 +32,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req, res, next){
-    // res.locals.error = req.flash("error");
-    // res.locals.success = req.flash("success");
+    res.locals.error = req.flash("error");
+    res.locals.success = req.flash("success");
     res.locals.currentUser = req.user;
     next();
 });
