@@ -12,6 +12,7 @@ var express       = require('express'),
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use(flash());
 
 var mongoUrl  = process.env.DATABASEURL || "mongodb://localhost/scoremyride";
 mongoose.connect(mongoUrl);
