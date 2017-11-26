@@ -23,7 +23,7 @@ router.post("/register", function(req, res){
             req.flash("error", err.message);
             return res.redirect("/register");
         }
-        req.flash("success", "Welcome to Score My Ride! " + req.body.username);
+        req.flash("success", "Welcome to Score My Ride " + req.body.username + " !");
         passport.authenticate("local")(req, res, function(){
             res.redirect("/wavetypes");
         });
@@ -38,7 +38,7 @@ router.get("/login", function(req,res){
 //handle login logic
 router.post("/login", passport.authenticate("local", 
     {
-        successRedirect: "/wavetypess",
+        successRedirect: "/wavetypes",
         failureRedirect: "/login"
     }), function(req, res){
 });
