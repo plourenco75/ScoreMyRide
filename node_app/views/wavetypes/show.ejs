@@ -11,6 +11,7 @@
                     <p>
                         <em>Submitted by <%= wavetype.author.username %></em>
                     </p>
+                    <a class="btn btn-success" href="/scorebuilder">Start Scoring Rides!</a>
                     <% if (currentUser && wavetype.author.id.equals(currentUser._id)) { %>
                         <a class="btn btn-warning" href="/wavetypes/<%= wavetype._id %>/edit">Edit</a>
                         <form class="delete-form" action="/wavetypes/<%= wavetype._id %>?_method=DELETE" method="POST">
@@ -30,6 +31,7 @@
                     <label>Medium turn<input class="form-control" type="number" name="mediumtube" value="<%= wavetype.mediumturn %>"></label>
                     <label>Small turn / setup manouevre<input class="form-control" type="number" name="smalltube" value="<%= wavetype.smallturn %>"></label>
                 </div>
+                <a href="/wavetypes">Go Back</a>
             </div>
         </div>
     </div>

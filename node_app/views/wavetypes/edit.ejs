@@ -1,0 +1,50 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align:center">Edit Wave Type</h1>
+            <div style="width:30%; margin:25px auto;">
+                <form action="/wavetypes/<%= wavetype._id %>?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="wavetype[name]" placeholder="name" value="<%= wavetype.name %>">
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="text" name="wavetype[image]" placeholder="image url" value="<%= wavetype.image %>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="wavetype[description]" placeholder="description" value="<%= wavetype.description %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Great tube
+                            <input class="form-control" type="number" name="wavetype[supertube]" placeholder="Great tube ride" min="0.5" max="10.0" step="0.5" value="<%= wavetype.supertube %>">
+                        </label>
+                        <label>Medium tube
+                            <input class="form-control" type="number" name="wavetype[mediumtube]" placeholder="Medium tube ride" min="0.5" max="10.0" step="0.5" value="<%= wavetype.mediumtube %>">
+                        </label>
+                        <label>Small tube
+                            <input class="form-control" type="number" name="wavetype[smalltube]" placeholder="Small tube ride" min="0.5" max="10.0" step="0.5" value="<%= wavetype.smalltube %>">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Amazing turn
+                            <input class="form-control" type="number" name="wavetype[superturn]" placeholder="Amazing turn" min="0.5" max="10.0" step="0.5" value="<%= wavetype.superturn %>">
+                        </label>
+                        <label>Medium turn
+                            <input class="form-control" type="number" name="wavetype[mediumturn]" placeholder="Medium turn" min="0.5" max="10.0" step="0.5" value="<%= wavetype.mediumturn %>">
+                        </label>
+                        <label>Small turn
+                            <input class="form-control" type="number" name="wavetype[smallturn]" placeholder="Small turn" min="0.5" max="10.0" step="0.5" value="<%= wavetype.smallturn %>">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    </div>
+                </form>
+                <a href="/wavetypes">Go Back</a>
+            </div>
+    
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

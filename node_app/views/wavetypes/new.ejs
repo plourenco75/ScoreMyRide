@@ -1,0 +1,46 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align:center">Create a New Wave Type</h1>
+            <div style="width:30%; margin:25px auto;">
+                <form action="/wavetypes" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="name" placeholder="name">
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="text" name="image" placeholder="image url">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="description" placeholder="description">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="supertube" placeholder="Great tube ride" min="0.5" max="10.0" step="0.5">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="mediumtube" placeholder="Medium tube ride" min="0.5" max="10.0" step="0.5">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="smalltube" placeholder="Small tube ride" min="0.5" max="10.0" step="0.5">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="superturn" placeholder="Amazing turn" min="0.5" max="10.0" step="0.5">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="mediumturn" placeholder="Medium turn" min="0.5" max="10.0" step="0.5">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="smallturn" placeholder="Small turn" min="0.5" max="10.0" step="0.5">
+                    </div>
+                    <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    </div>
+                </form>
+                <a href="/wavetypes">Go Back</a>
+            </div>
+    
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

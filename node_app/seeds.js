@@ -33,26 +33,8 @@ var data = [
 ]
 
 
-// var data = [
-//     {
-//         name: "Cloud's Rest",
-//         image: "https://farm4.staticflickr.com/3795/10131087094_c1c0a1c859.jpg",
-//         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, mauris et bibendum malesuada, metus metus aliquet nunc, a vulputate erat ipsum nec nibh. Praesent aliquam turpis augue, vitae volutpat justo bibendum at. Vivamus erat nunc, venenatis ut facilisis id, commodo in nunc. Sed et malesuada nibh. Fusce placerat, metus eu varius bibendum, justo lacus blandit nulla, vel gravida dui magna nec urna. Quisque hendrerit justo vitae neque pellentesque, in tempor nisi vulputate. Cras dignissim sem ac elit gravida eleifend. "
-//     },
-//     {
-//         name: "Desert Mesa",
-//         image: "https://farm4.staticflickr.com/3859/15123592300_6eecab209b.jpg",
-//         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, mauris et bibendum malesuada, metus metus aliquet nunc, a vulputate erat ipsum nec nibh. Praesent aliquam turpis augue, vitae volutpat justo bibendum at. Vivamus erat nunc, venenatis ut facilisis id, commodo in nunc. Sed et malesuada nibh. Fusce placerat, metus eu varius bibendum, justo lacus blandit nulla, vel gravida dui magna nec urna. Quisque hendrerit justo vitae neque pellentesque, in tempor nisi vulputate. Cras dignissim sem ac elit gravida eleifend. "
-//     },
-//     {
-//         name: "Canyon Floor",
-//         image: "https://farm4.staticflickr.com/189/493046463_841a18169e.jpg",
-//         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, mauris et bibendum malesuada, metus metus aliquet nunc, a vulputate erat ipsum nec nibh. Praesent aliquam turpis augue, vitae volutpat justo bibendum at. Vivamus erat nunc, venenatis ut facilisis id, commodo in nunc. Sed et malesuada nibh. Fusce placerat, metus eu varius bibendum, justo lacus blandit nulla, vel gravida dui magna nec urna. Quisque hendrerit justo vitae neque pellentesque, in tempor nisi vulputate. Cras dignissim sem ac elit gravida eleifend. "
-//     }
-// ]
-
 function seedDB(){
-    Wavetype.remove({}, function(err){
+    Wavetype.remove({'author.username': null}, function(err){
         if(err){
             console.log(err);
         } else {
@@ -64,20 +46,6 @@ function seedDB(){
                         console.log(err);
                     } else {
                         console.log("added a wavetype");
-                        // create a comment
-                        // Comment.create(
-                        //     {
-                        //         text: "great spot, but no internet! :( ",
-                        //         author: "Homer"
-                        //     }, function (err, comment){
-                        //         if (err){
-                        //             console.log(err);
-                        //         } else {
-                        //             campground.comments.push(comment);
-                        //             campground.save();
-                        //             console.log("created a new comment");
-                        //         }
-                        // });
                     }
                 });
             });
