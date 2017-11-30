@@ -118,14 +118,16 @@ router.delete("/wavetypes/:id", middleware.checkWavetypeOwnership, function(req,
             req.flash("success", "wavetype deleted");
             res.redirect("/wavetypes");
         }
-    });
+    })
 });
 
 
 
 // Redirect to main scoring app/page
-router.get("/scorebuilder", function(req, res){
-    res.render("scorebuilder", {wavetype: req.body.wavetype});
+router.get("/scorebuilder/:id", function(req, res){
+    Wavetype.findById(req.params.id, function(err, foundWavetype){
+        res.render("scorebuilder", {wavetype: foundWavetype});
+    })
 });
 
 

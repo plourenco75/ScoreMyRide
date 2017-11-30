@@ -4,6 +4,10 @@ reset();
 
 var scoreProfile = {};
 
+function initScoreProfile(profile) {
+    scoreProfile = profile;
+}
+
 //scoring button functions
 $("#smturn").on("click", function(){
     updateScore(scoreProfile.smallturn);

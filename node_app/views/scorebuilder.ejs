@@ -1,8 +1,7 @@
 <% include partials/header %>
 
-<%= scoreProfile = wavetype %> <!-- populate the score profile with selected wavetype -->
-
     <div class="container">
+            <h1><%= wavetype.name %></h1>
             <div class="row">
                 <div class="col-sm-12">
                     <button id="bonus" class="btn btn-warning btn-lg btn-block adjustbtn">
@@ -57,7 +56,12 @@
                     <button id="reset" class="btn btn-default btn-lg btn-block scorebtn">Reset Score</button>
                 </div>
             </div>
-        </div>
+    </div>
+
+    <script src="/js/scoremyride.js"></script>
+    <script>
+        initScoreProfile(<%- JSON.stringify(wavetype) %>);
+    </script>
 
 
 <% include partials/footer %>
