@@ -12,20 +12,27 @@ router.get("/", function(req, res){
 router.get("/wavetypes", function(req, res){
     // Get all wavetypes from DB
     // logic to check if logged in .. if so, then only retrieve wavetypes defined by that user only,
-    // otherwise return only the wavetypes created by default seed data (ie null usernames)
-    userSearchStr = null;
+    // otherwise return ALL the wavetypes in the db!
     if (req.isAuthenticated()) {
-        userSearchStr = req.user.username;
+        Wavetype.find({'author.username': req.user.username}, function(err, allWavetypes){
+            if (err) {
+                console.log(err);
+                req.flash("error", err.message);
+            } else {
+                res.render("wavetypes/index", {wavetypes: allWavetypes, currentUser: req.user});
+            }
+        });
+    } else {
+        // get all the waves..
+        Wavetype.find({}, function (err, allWavetypes){
+            if (err) {
+                console.log(err);
+                req.flash("error", err.message);
+            } else {
+                res.render("wavetypes/index", {wavetypes: allWavetypes, currentUser: req.user});
+            }
+        });
     }
-
-    Wavetype.find({'author.username': userSearchStr}, function(err, allWavetypes){
-        if (err) {
-            console.log(err);
-            req.flash("error", err.message);
-        } else {
-            res.render("wavetypes/index", {wavetypes: allWavetypes, currentUser: req.user});
-        }
-    })
 });
 
 
