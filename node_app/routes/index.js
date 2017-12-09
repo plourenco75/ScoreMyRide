@@ -50,5 +50,26 @@ router.get("/logout", function(req, res){
     res.redirect("/wavetypes");
 });
 
+// show change password form
+router.get("/changepwd", function(req, res){
+    res.render("changepwd");
+});
+
+// handle password change
+router.post("/changepwd", function(req, res){
+    console.log(req.body);
+    // console.log(user);
+    passport.authenticate("local")(req, res, function(){
+    //     user.changePassword(req.body.oldPassword, req.body.newPassword, function(err, user){
+            if (err) {
+                req.flash("error", err.message);
+                res.redirect("/wavetypes");
+            } else {
+                req.flash("success", "Password changed successfully for " + user.username);
+                res.redirect("/wavetypes");
+            }
+        });
+    // });
+});
 
 module.exports = router;
