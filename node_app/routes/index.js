@@ -2,7 +2,8 @@ var express  = require('express');
 var router   = express.Router();
 var passport = require('passport');
 
-var User    = require('../models/user')
+var User    = require('../models/user');
+var middleware  = require('../middleware');
 
 router.get("/", function(req, res){
     // res.send("this will be the landing page");
@@ -51,25 +52,29 @@ router.get("/logout", function(req, res){
 });
 
 // show change password form
-router.get("/changepwd", function(req, res){
+router.get("/changepwd", middleware.isLoggedIn, function(req, res){
     res.render("changepwd");
 });
 
 // handle password change
-router.post("/changepwd", function(req, res){
-    console.log(req.body);
-    // console.log(user);
-    passport.authenticate("local")(req, res, function(){
-    //     user.changePassword(req.body.oldPassword, req.body.newPassword, function(err, user){
+router.post("/changepwd", middleware.isLoggedIn, function(req, res){
+    console.log(req.user);
+    User.findById(req.user.id, function(err, myUser){
+        if (err) {
+            req.flash("error", err.message);
+            res.redirect("/wavetypes");
+        }
+        myUser.changePassword(req.body.oldPassword, req.body.newPassword, function(err, myUser){
             if (err) {
                 req.flash("error", err.message);
                 res.redirect("/wavetypes");
             } else {
-                req.flash("success", "Password changed successfully for " + user.username);
+                req.flash("success", "Password changed successfully for " + myUser.username);
                 res.redirect("/wavetypes");
             }
         });
-    // });
+    });
 });
+
 
 module.exports = router;
