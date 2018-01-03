@@ -4,9 +4,6 @@ var router   = express.Router();
 var Wavetype    = require('../models/wavetype');
 var middleware  = require('../middleware');
 
-router.get("/", function(req, res){
-    res.render("landing");
-});
 
 // INDEX - show all wavetypes
 router.get("/wavetypes", function(req, res){
