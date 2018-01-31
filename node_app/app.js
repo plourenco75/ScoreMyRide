@@ -48,6 +48,6 @@ var wavetypeRoutes = require('./routes/wavetypes'),
 app.use(indexRoutes);
 app.use(wavetypeRoutes);
     
-app.listen(5000, function(){
+app.listen(5050, function(){
     console.log("ScoreMyRide Server Started");
 });
