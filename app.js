@@ -16,7 +16,10 @@ app.use(methodOverride("_method"));
 app.use(flash());
 
 var mongoUrl  = process.env.DATABASE_URL || "mongodb://localhost/scoremyride";
-mongoose.connect(mongoUrl);
+mongoose.connect(mongoUrl, {
+    useNewUrlParser: true,
+    useCreateIndex: true
+});
 
 //optional default config for db
 seedDB();
