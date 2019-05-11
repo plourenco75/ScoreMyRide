@@ -15,7 +15,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 
-var mongoUrl  = process.env.DATABASEURL || "mongodb://localhost/scoremyride";
+var mongoUrl  = process.env.DATABASE_URL || "mongodb://localhost/scoremyride";
 mongoose.connect(mongoUrl);
 
 //optional default config for db

@@ -11,7 +11,7 @@ var data = [
     },
     {
         name: "Pointbreak (Hollow)", description: "Long pointbreak with various barrel sections",
-        image: "https://www.fijivacations.com/media/Tavarua-Cloudbreak-900x426.jpg",
+        image: "https://www.namotuislandfiji.com/wp-content/uploads/2019/01/0006-825x389.jpg",
         supertube:  5.0,  superturn:  3.0, superhuman: 5.5,
         mediumtube: 4.0,  mediumturn: 2.0,
         smalltube:  3.0,  smallturn:  1.0
