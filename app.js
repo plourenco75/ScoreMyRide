@@ -50,7 +50,9 @@ var wavetypeRoutes = require('./routes/wavetypes'),
 
 app.use(indexRoutes);
 app.use(wavetypeRoutes);
+
+const port = process.env.PORT || 5050
     
-app.listen(5050, function(){
+app.listen(port, function(){
     console.log("ScoreMyRide Server Started");
 });
