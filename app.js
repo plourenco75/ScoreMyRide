@@ -22,7 +22,7 @@ mongoose.connect(mongoUrl, {
 });
 
 //optional default config for db
-seedDB();
+// seedDB();
 
 // PASSPORT CONFIG
 app.use(require('express-session')({
