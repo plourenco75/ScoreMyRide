@@ -46,7 +46,7 @@ body {
     background-image: url(https://www.surfertoday.com/images/stories/surfingaquitaine.jpg) 
 }
 .slideshow li:nth-child(2) { 
-    background-image: url(https://s3-us-west-1.amazonaws.com/sl-coldfusion-static-prod/surfnews/images/2009/02_february/tavarua_lippman/full/01photo_jason_naude_the_line_up.jpg);
+    background-image: url(https://www.namotuislandfiji.com/wp-content/uploads/2019/01/0006-825x389.jpg);
     animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
