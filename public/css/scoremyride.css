@@ -48,3 +48,45 @@
     background: steelblue;
     color: white;
 }
+
+.redscorebtn {
+    float: left;
+    margin: 5px 5px;
+    background-size: auto;
+    background: red;
+}
+
+.whitescorebtn {
+    float: left;
+    margin: 5px 5px;
+    background-size: auto;
+    background: white;
+}
+
+.bluescorebtn {
+    float: left;
+    margin: 5px 5px;
+    background-size: auto;
+    background: blue;
+}
+
+.blackscorebtn {
+    float: left;
+    margin: 5px 5px;
+    background-size: auto;
+    background: black;
+}
+
+.purplescorebtn {
+    float: left;
+    margin: 5px 5px;
+    background-size: auto;
+    background: purple;
+}
+
+.yellowscorebtn {
+    float: left;
+    margin: 5px 5px;
+    background-size: auto;
+    background: yellow;
+}
