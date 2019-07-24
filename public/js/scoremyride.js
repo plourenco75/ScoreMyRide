@@ -9,47 +9,77 @@ function initScoreProfile(profile) {
 }
 
 //scoring button functions
-$("#smturn").on("click", function(){
+$("#smturn").on("click", () => {
     updateScore(scoreProfile.smallturn);
 });
 
-$("#qktube").on("click", function(){
+$("#qktube").on("click", () => {
     updateScore(scoreProfile.smalltube);
 });
 
-$("#mdturn").on("click", function(){
+$("#mdturn").on("click", () => {
     updateScore(scoreProfile.mediumturn);
 });
 
-$("#mdtube").on("click", function(){
+$("#mdtube").on("click", () => {
     updateScore(scoreProfile.mediumtube);
 });
 
-$("#superhmn").on("click", function(){
+$("#superhmn").on("click", () => {
     updateScore(scoreProfile.superhuman);
 });
 
-$("#superturn").on("click", function(){
+$("#superturn").on("click", () => {
     updateScore(scoreProfile.superturn);
 });
 
-$("#supertube").on("click", function(){
+$("#supertube").on("click", () => {
     updateScore(scoreProfile.supertube);
 });
 
-$("#reset").click(function(){
+$("#reset").click(() => {
     reset();
 });
 
-$("#bonus").click(function(){
+$("#bonus").click(() => {
     updateScore(0.25);
 });
 
-$("#deduct").click(function(){
+$("#deduct").click(() => {
     updateScore(-0.5);
 });
 
-function updateScore(num) {
+
+$("#redscore").click(() => {
+    postScore('redscorebtn')
+})
+$("#whitescore").click(() => {
+    postScore('whitescorebtn')
+})
+$("#bluescore").click(() => {
+    postScore('bluescorebtn')
+})
+$("#blackscore").click(() => {
+    postScore('blackscorebtn')
+})
+$("#purplescore").click(() => {
+    postScore('purplescorebtn')
+})
+$("#yellowscore").click(() => {
+    postScore('yellowscorebtn')
+})
+
+
+const postScore = (colourButton) => {
+    const newRowHtml = 
+        `<div class="col-sm-2">
+            <button class="btn btn-default btn-lg btn-block ${colourButton}">${theScore}</button>
+        </div>`
+    $('#rashierow').append(newRowHtml)
+    reset()
+}
+
+const updateScore = (num) => {
     theScore += num;
     if (theScore >= 10) {
         $("#thescore").css("color", "green");

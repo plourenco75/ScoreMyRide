@@ -49,44 +49,49 @@
     color: white;
 }
 
-.redscorebtn {
+.btn-default.redscorebtn {
     float: left;
     margin: 5px 5px;
     background-size: auto;
     background: red;
+    color: yellow;
 }
 
-.whitescorebtn {
+.btn-default.whitescorebtn {
     float: left;
     margin: 5px 5px;
     background-size: auto;
     background: white;
 }
 
-.bluescorebtn {
+.btn-default.bluescorebtn {
     float: left;
     margin: 5px 5px;
     background-size: auto;
     background: blue;
+    color: yellow;
 }
 
-.blackscorebtn {
+.btn-default.blackscorebtn {
     float: left;
     margin: 5px 5px;
     background-size: auto;
     background: black;
+    color: white;
 }
 
-.purplescorebtn {
+.btn-default.purplescorebtn {
     float: left;
     margin: 5px 5px;
     background-size: auto;
     background: purple;
+    color: white;
 }
 
-.yellowscorebtn {
+.btn-default.yellowscorebtn {
     float: left;
     margin: 5px 5px;
     background-size: auto;
     background: yellow;
+    color: blue;
 }
