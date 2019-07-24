@@ -12,9 +12,21 @@
 }
 
 .tubebtn {
-    background-image: url(../imgs/tube.png);
+    /* background-image: url(../imgs/tube.png); */
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#supertube {
+    background-image: url(../imgs/large_tube.PNG);
+}
+
+#mdtube {
+    background-image: url(../imgs/med_tube.PNG);
+}
+
+#qktube {
+    background-image: url(../imgs/small_tube.PNG);
 }
 
 .turnbtn {
