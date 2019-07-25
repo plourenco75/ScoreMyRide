@@ -18,15 +18,15 @@
 }
 
 #supertube {
-    background-image: url(../imgs/large_tube.PNG);
+    background-image: url(../imgs/large_tube2.png);
 }
 
 #mdtube {
-    background-image: url(../imgs/med_tube.PNG);
+    background-image: url(../imgs/med_tube2.png);
 }
 
 #qktube {
-    background-image: url(../imgs/small_tube.PNG);
+    background-image: url(../imgs/small_tube2.png);
 }
 
 .turnbtn {
