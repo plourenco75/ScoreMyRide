@@ -68,7 +68,7 @@ router.post("/wavetypes", middleware.isLoggedIn, function(req,res){
             req.flash("error", err.message);
             res.redirect("/wavetypes");
         } else {
-            req.flash("success", "New wave type created!");
+            req.flash("success", "New Judging Criteria created!");
             //redirect to wavetypes page
             res.redirect("/wavetypes");
         }
